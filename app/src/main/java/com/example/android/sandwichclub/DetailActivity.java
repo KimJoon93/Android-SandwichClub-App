@@ -25,6 +25,8 @@ public class DetailActivity extends AppCompatActivity {
     @BindView(R.id.image_iv) ImageView ingredientsIv;
     @BindView(R.id.origin_tv) TextView mOriginTv;
     @BindView(R.id.also_known_tv) TextView mAlsoTv;
+    @BindView(R.id.ingredients_tv) TextView mIngredients;
+    @BindView(R.id.description_tv) TextView mDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,17 @@ public class DetailActivity extends AppCompatActivity {
             mAlsoTv.setText(getString(R.string.message_not_available));
         }
 
+        /** Ingredients Text Set*/
+        List<String> ingredientsList = sandwich.getIngredients();
+        if(mIngredients != null){
+            String ingredients = TextUtils.join(getString(R.string.new_line), ingredientsList);
+            mIngredients.setText(ingredients);
+        }else{
+            mIngredients.setText(getString(R.string.message_not_available));
+        }
+
+        /** Description Text Set*/
+        mDescription.setText(sandwich.getDescription());
     }
 
 }
