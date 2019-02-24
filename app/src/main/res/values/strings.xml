@@ -128,4 +128,7 @@
         </item>
     </string-array>
 
+    <string name="message_not_available">No Info available</string>
+    <string name="new_line">\n</string>
+
 </resources>
