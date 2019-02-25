@@ -11,7 +11,6 @@ import java.util.List;
 public class JsonUtils {
 
     private static final String TAG = JsonUtils.class.getSimpleName();
-
     private static final String KEY_NAME = "name";
     private static final String KEY_MAIN_NAME = "mainName";
     private static final String KEY_ALSO_KNOWN_AS = "alsoKnownAs";
@@ -24,7 +23,6 @@ public class JsonUtils {
         if (TextUtils.isEmpty(json)) {
             return null;
         }
-
         try {
             JSONObject baseJson = new JSONObject(json);
             JSONObject name = baseJson.getJSONObject(KEY_NAME);
@@ -46,11 +44,8 @@ public class JsonUtils {
             }
 
             String description = baseJson.getString(KEY_DESCRIPTION);
-
             String imageUrl = baseJson.getString(KEY_IMAGE);
-
             JSONArray ingredientsArray = baseJson.getJSONArray(KEY_INGREDIENTS);
-
             List<String> ingredients = new ArrayList<>();
 
             if (ingredientsArray.length() != 0) {

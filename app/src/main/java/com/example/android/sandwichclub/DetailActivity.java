@@ -1,8 +1,6 @@
 package com.example.android.sandwichclub;
 
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,9 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -62,8 +58,6 @@ public class DetailActivity extends AppCompatActivity {
                 .into(ingredientsIv);
 
         setTitle(sandwich.getMainName());
-
-
     }
 
     private void closeOnError() {
